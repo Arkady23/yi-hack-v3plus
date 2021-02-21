@@ -1,2 +1,3 @@
 # yi-hack-v3plus
-Addition to the yi-hack-v3 firmware with RTSP capability and other well-known developments
+Вы можете воспользоваться этой доработкой вашей Yi home камеры, если у вас уже установлена прошивка yi-hack-v3.
+В этой доработке обнавлен web-сервер, добавлена возможность просматривать через http записи с SD-карты, добавлен ряд настроек, в том числе подключение RSTP-сервера.
