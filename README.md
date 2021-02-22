@@ -20,6 +20,8 @@
 
 Поток RTSP открывается по URL rtsp://192.168.1.123/ch0_0.h264 и rtsp://192.168.1.123/ch0_1.h264.
 
+Ссылка на прошивку shadow-1/yi-hack-v3 https://github.com/shadow-1/yi-hack-v3
+
 
 ![Просмотр папок с записями](https://github.com/Arkady23/yi-hack-v3plus/blob/main/Screenshots/image_2021_02_21T13_57_08_096Z.png?raw=true)
 
