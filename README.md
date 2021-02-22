@@ -1,4 +1,4 @@
-# yi-hack-v3plus (russian и english vtrsions)
+# yi-hack-v3plus (russian и english versions)
 Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, обычный RTSP-сервер (не платный).
 
 Вы можете установить это дополнение к вашей Yi home камере, если у вас уже установлена прошивка yi-hack-v3.
