@@ -22,7 +22,7 @@
 
 Ссылка на прошивку shadow-1/yi-hack-v3 https://github.com/shadow-1/yi-hack-v3  
 Использован модуль vencrtsp_v2 для RTSP-сервера из проекта Necromix. Ссылка https://github.com/Necromix/yi-vencrtsp_v2.  
-Использованы модули httpd, camhash, ntpd, all.css, favicon.png для Web-сервера и Ntpd-сервера из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
+Использованы модули httpd, camhash, ntpd, all.css, favicon.png и библиотека lib/* для Web-сервера и Ntpd-сервера из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
 
 ![Просмотр папок с записями](https://github.com/Arkady23/yi-hack-v3plus/blob/main/Screenshots/image_2021_02_21T13_57_08_096Z.png?raw=true)
 
