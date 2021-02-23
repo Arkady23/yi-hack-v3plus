@@ -20,7 +20,7 @@
 
 Поток RTSP открывается по URL rtsp://192.168.1.123/ch0_0.h264 и rtsp://192.168.1.123/ch0_1.h264.
 
-Ссылка на прошивку shadow-1/yi-hack-v3 https://github.com/shadow-1/yi-hack-v3  
+Ссылка на прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3  
 Использован модуль vencrtsp_v2 для RTSP-сервера из проекта Necromix. Ссылка https://github.com/Necromix/yi-vencrtsp_v2.  
 Использованы модули httpd, camhash, ntpd, all.css, favicon.png и библиотека lib/* для Web-сервера и Ntpd-сервера из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
 
