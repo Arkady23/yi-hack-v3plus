@@ -8,9 +8,7 @@ elif [ -d "/home/yi-hack-v3" ]; then
         YI_HACK_V3_PREFIX="/home"
 fi
 
-get_config()
-{
-        key=$1
+get_config(){
         grep $1 $YI_HACK_V3_PREFIX$CONF_FILE | cut -d "=" -f2
 }
 
@@ -45,8 +43,6 @@ if [[ $(get_config NTPD) == "yes" ]] ; then
 # Wait until all the other processes have been initialized
 	 sleep 5 && ntpd -p pool.ntp.org &
 fi
-
-sleep 25 && camhash > /tmp/camhash &
 
 if [ -f "/tmp/sd/yi-hack-v3/startup.sh" ]; then
 	/tmp/sd/yi-hack-v3/startup.sh
