@@ -10,9 +10,13 @@ ATTENTION!!!!
 =============
 To date, the add-on has only been tested for the Yi Home 17CN / 27US / 47US variant (rootfs_y18, home_y18). If you have a different model, do not rush to install this add-on. Please open the contents of the camera via ftp and copy the folders /home/ and /usr/ with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me. After that, I can finalize the installation of my add-on for your camera model.
 
+if you still installed this add-on on your other camera model, then reinstall the firmware https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the \usr\ and \home folders\.
+
 ВНИМАНИЕ!!!
 ===========
-На сегодняшний день дополнение проверено только для варианта Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18).  Если у вас другая модель не торопитесь устанавливать это дополнение. Пожалуйста, откройте содержание камеры через ftp и скопируйте папки /home/ и /usr/ со всем, что там есть (паролей в них нет) к себе на компьютер. Заархивируйте эти папки и пришлите мне. После этого я смогу доработать установку своего дополнения для вашей модели камеры.  
+На сегодняшний день дополнение проверено только для варианта Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18).  Если у вас другая модель не торопитесь устанавливать это дополнение. Пожалуйста, откройте содержание камеры через ftp и скопируйте папки /home/ и /usr/ со всем, что там есть (паролей в них нет) к себе на компьютер. Заархивируйте эти папки и пришлите мне. После этого я смогу доработать установку своего дополнения для вашей модели камеры.
+
+Если вы все-таки установили это дополнение на другую свою модель камеры, то переустановите прошивку https://github.com/shadow-1/yi-hack-v3. А затем войдите через ftp и скопируйте папки \usr\ и \home\.
 * * * * *
 
 Дополнение включает:  
