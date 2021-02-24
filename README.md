@@ -10,7 +10,7 @@ ATTENTION!!!!
 =============
 To date, the add-on has only been tested for the Yi Home 17CN / 27US / 47US variant (rootfs_y18, home_y18). If you have a different model, do not rush to install this add-on. Please open the contents of the camera via ftp and copy the folders /home/ and /usr/ with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me. After that, I can finalize the installation of my add-on for your camera model.
 
-if you still installed this add-on on your other camera model, then reinstall the firmware аrom the project https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the \usr\ and \home folders\.
+if you still installed this add-on on your other camera model, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the \usr\ and \home folders\.
 
 ВНИМАНИЕ!!!
 ===========
