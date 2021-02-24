@@ -22,11 +22,11 @@ QUERY=$(echo "$QUERY_STRING" | cut -d'=' -f1)
 N2=$(echo "${QUERY}" | awk '{print length}')
 VAL=$(echo "$QUERY_STRING" | cut -c ${N2}-)
 
-if [ "$HOST" != $QUERY ] ; then
+if [ "$HOST" != "$QUERY" ] ; then
 	echo "${QUERY:8}" > $YI_HACK_PREFIX/hostname
 fi
 
-if [ "$TZ" != $VAL ] ; then
+if [ "$TZ" != "$VAL" ] ; then
 	echo "${VAL:2}" > /etc/TZ
 fi
 
