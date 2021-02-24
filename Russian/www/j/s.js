@@ -515,7 +515,7 @@ function power(off){
   }else{
     go('cgi-bin/poweroff.sh?reset');
     tbody.value="Камера перезагружается...";
-    setTimeout(function(){go('cgi-bin/test.sh')},21000);
+    setTimeout(function(){go('cgi-bin/test.sh')},23000);
   }
 }
 
