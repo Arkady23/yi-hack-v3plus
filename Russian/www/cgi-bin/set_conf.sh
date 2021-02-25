@@ -14,39 +14,37 @@ fi
 #for S in $PARAMS ; do
 #done
 
-
-HOST = $(cat $YI_HACK_PREFIX/hostname)
-TZ = $(cat /etc/TZ)
+confs=$(cat $YI_HACK_PREFIX/system.conf)
 
 QUERY=$(echo "$QUERY_STRING" | cut -d'=' -f1)
-N2=$(echo "${QUERY}" | awk '{print length}')
+N2=$(echo "$QUERY" | awk '{print length}')
 VAL=$(echo "$QUERY_STRING" | cut -c ${N2}-)
 
-if [ "$HOST" != "$QUERY" ] ; then
+
+if [ $(cat $YI_HACK_PREFIX/hostname) != ${QUERY:8} ] ; then
 	echo "${QUERY:8}" > $YI_HACK_PREFIX/hostname
 fi
 
-if [ "$TZ" != "$VAL" ] ; then
+if [ $(cat /etc/TZ) != ${VAL:2} ] ; then
 	echo "${VAL:2}" > /etc/TZ
 fi
 
-N = "no"
-Y = "yes"
-CONFIG = "$YI_HACK_PREFIX/system.conf"
+get_config(){
+	echo "$confs" | grep $1 | cut -d "=" -f2
+}
 
-if [ ${QUERY:0:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(DISABLE_CLOUD\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:1:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(REC_WITHOUT_CLOUD\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:2:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(PROXYCHAINSNG\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:3:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(RTSP\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:4:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(FTPD\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:5:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(TELNETD\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:6:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(NTPD\s*=\s*\).*$/\1$VAL/" $CONFIG
-if [ ${QUERY:7:1} == "1" ]; then  VAL=$Y; else VAL=$N; fi
-sed -i "s/^\(HTTPD\s*=\s*\).*$/\1$VAL/" $CONFIG
+YES(){
+  if [ $1 == "1" ]; then V="yes"; else V="no"; fi
+  if [ $(get_config $2) != "$V" ] ; then
+	sed -i "s/^\($2\s*=\s*\).*$/\1$V/" $YI_HACK_PREFIX/system.conf
+  fi
+}
+
+YES ${QUERY_STRING:0:1} "DISABLE_CLOUD"
+YES ${QUERY_STRING:1:1} "REC_WITHOUT_CLOUD"
+YES ${QUERY_STRING:2:1} "PROXYCHAINSNG"
+YES ${QUERY_STRING:3:1} "RTSP"
+YES ${QUERY_STRING:4:1} "FTPD"
+YES ${QUERY_STRING:5:1} "TELNETD"
+YES ${QUERY_STRING:6:1} "NTPD"
+YES ${QUERY_STRING:7:1} "HTTPD"
