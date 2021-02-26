@@ -80,14 +80,14 @@ cd /home/app
 ./rmm &
 sleep 3
 
-CONF_FILE="/yi-hack-v3/etc/system.conf"
 if [ -d "/usr/yi-hack-v3" ]; then
         YI_HACK_PREFIX="/usr"
 elif [ -d "/home/yi-hack-v3" ]; then
         YI_HACK_PREFIX="/home"
 fi
+
 get_config(){
-	grep $1 $YI_HACK_PREFIX$CONF_FILE | cut -d "=" -f2
+	grep $1 $YI_HACK_PREFIX/yi-hack-v3/etc/system.conf | cut -d "=" -f2
 }
 
 RTSP=$(get_config RTSP)
