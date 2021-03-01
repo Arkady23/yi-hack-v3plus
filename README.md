@@ -13,7 +13,7 @@ To date, this add-on supports the following camera models:
 – Yi 1080p Home (rootfs_y20, home_y20) not tested,  
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
-– Yi Outdoor (rootfs_h30, home_h30) was tested, but no RTSP yet.
+– Yi Outdoor (rootfs_h30, home_h30) was tested, but no RTSP yet.  
 If your camera model doesn't work after installation this add-on, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the /usr/ and /home/ folders with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me an email a(dog)kornienko.ru, please. After that, I can release a new version of this add-on for your camera model.  
 
 ВНИМАНИЕ!!!
