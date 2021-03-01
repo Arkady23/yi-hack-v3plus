@@ -19,7 +19,7 @@ If your camera model doesn't work after installation this add-on, then reinstall
 ВНИМАНИЕ!!!
 ===========
 На сегодняшний день дополнение поддерживает следующие модели камер:  
-– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) с простейшим RTSP-сервером,
+– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) с простейшим RTSP-сервером,  
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялась,  
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
