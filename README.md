@@ -14,7 +14,7 @@ To date, this add-on supports the following camera models:
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
 – Yi Outdoor (rootfs_h30, home_h30) was tested, but no RTSP yet.
-If your camera model doesn't work after installation this add-on, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the /usr/ and /home/ folders with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me an email a(dog)kornienko.ru, please. After that, I can finalize the installation of my add-on for your camera model.  
+If your camera model doesn't work after installation this add-on, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. And then log in via ftp and copy the /usr/ and /home/ folders with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me an email a(dog)kornienko.ru, please. After that, I can release a new version of this add-on for your camera model.  
 
 ВНИМАНИЕ!!!
 ===========
@@ -24,7 +24,7 @@ If your camera model doesn't work after installation this add-on, then reinstall
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
 – Yi Outdoor (rootfs_h30, home_h30) проверялась, но RTSP-сервер ещё не подобран,  
-Если ваша модель камеры не работает после установки этого дополнения, то переустановите прошивку из проекта https://github.com/shadow-1/yi-hack-v3. А затем войдите в систему через ftp и скопируйте папки /usr/ и /home/ со всем, что там есть (в них нет паролей) на свой компьютер. Заархивируйте эти папки и пришлите их мне по электронной почте a(собака)kornienko.ru. После этого я могу завершить установку моего дополнения для вашей модели камеры.  
+Если ваша модель камеры не работает после установки этого дополнения, то переустановите прошивку из проекта https://github.com/shadow-1/yi-hack-v3. А затем войдите в систему через ftp и скопируйте папки /usr/ и /home/ со всем, что там есть (в них нет паролей) на свой компьютер. Заархивируйте эти папки и пришлите их мне по электронной почте a(собака)kornienko.ru. После этого я могу выпустить новую версию этого дополнения для вашей модели камеры.  
 * * * * *
 
 Дополнение включает:  
