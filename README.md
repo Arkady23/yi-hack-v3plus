@@ -9,7 +9,7 @@
 ATTENTION!!!!
 =============
 To date, this add-on supports the following camera models:  
-– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) with the simplest RTSP-server,  
+– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) works with the vencrtsp_v2 RTSP-server,  
 – Yi 1080p Home (rootfs_y20, home_y20) not tested,  
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
