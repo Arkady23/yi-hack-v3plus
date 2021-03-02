@@ -13,17 +13,17 @@ To date, this add-on supports the following camera models:
 – Yi 1080p Home (rootfs_y20, home_y20) not tested,  
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
-– Yi Outdoor (rootfs_h30, home_h30) was tested, but no RTSP yet.  
+– Yi Outdoor (rootfs_h30, home_h30) with the RTSP2303-server.  
 If your camera model doesn't work after installation this add-on, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. Then log in via ftp and copy the /usr/ and /home/ folders with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me an email a(dog)kornienko.ru, please. After that, I can release a new version of this add-on for your camera model.  
 
 ВНИМАНИЕ!!!
 ===========
 На сегодняшний день дополнение поддерживает следующие модели камер:  
-– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) с простейшим RTSP-сервером,  
+– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) работает с vencrtsp_v2 RTSP-сервером,  
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялась,  
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
-– Yi Outdoor (rootfs_h30, home_h30) проверялась, но RTSP-сервер ещё не подобран,  
+– Yi Outdoor (rootfs_h30, home_h30) работает с RTSP2303-сервером,  
 Если ваша модель камеры не работает после установки этого дополнения, то переустановите прошивку из проекта https://github.com/shadow-1/yi-hack-v3. А затем войдите в систему через ftp и скопируйте папки /usr/ и /home/ со всем, что там есть (в них нет паролей) на свой компьютер. Заархивируйте эти папки и пришлите их мне по электронной почте a(собака)kornienko.ru. После этого я могу выпустить новую версию этого дополнения для вашей модели камеры.  
 * * * * *
 
