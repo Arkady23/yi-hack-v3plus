@@ -40,7 +40,7 @@ If your camera model doesn't work after installation this add-on, then reinstall
 
 Как и любое дополнение к yi-hack-v3 установка заключается в помещении папки с дополнением yi-hack-v3 на SD-карту и перезагрузке камеры. После установки, камера перезагрузится и вы сможете открыть новый web-проект по IP-адресу камеры.
 
-Поток RTSP открывается по URL rtsp://root@192.168.1.123:554/ch0_0.h264 и rtsp://root@192.168.1.123:554/ch0_1.h264.
+Пишут, что оток RTSP открывается по URL rtsp://root@192.168.1.123:554/ch0_0.h264 и rtsp://root@192.168.1.123:554/ch0_1.h264, но точно не уверен, т.к. он открывается только в VLC-media.
 
 Ссылка на прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3  
 Использован модуль vencrtsp_v2 для RTSP-сервера из проекта Necromix. Ссылка https://github.com/Necromix/yi-vencrtsp_v2.  
