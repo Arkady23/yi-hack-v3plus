@@ -1,4 +1,6 @@
 # yi-hack-v3plus
+In the latest version from 03.03.2021 and later, the interface language is selected automatically according to the browser language.  
+
 Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (не платный). Похоже, что точный URL во многих случаях пока низвестен. Поэтому гарантировано RTPS подхватывается VLC-media плейером, т.к. это приложение само подбирает URL, можно даже указать: rtsp://ip-addres/
 
 Вы можете установить это дополнение к вашей Yi камере, если у вас уже установлена прошивка yi-hack-v3.
