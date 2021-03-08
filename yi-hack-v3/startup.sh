@@ -17,7 +17,7 @@
 
  case $cm in
    *"17CN"*)
-	sed -i "s/.\/$rs/startOFS=19264 repeatOFS=399798 readsPMON=-1 .\/$rs/" $fr/app/_init.sh
+	sed -i "s/.\/$rs/startOFS=19264 repeatOFS=399980 readsPMON=-1 .\/$rs/" $fr/app/_init.sh
 	;;
    *)
 	;;
