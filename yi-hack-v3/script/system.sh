@@ -32,7 +32,7 @@ if [[ $(get_config TELNETD) == "yes" ]] ; then
 fi
 
 if [[ $(get_config FTPD) == "yes" ]] ; then
-	pure-ftpd -B
+	tcpsvd -vE 0.0.0.0 21 ftpd -w &
 fi
 
 if [[ $(get_config NTPD) == "yes" ]] ; then
