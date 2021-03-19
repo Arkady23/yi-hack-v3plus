@@ -11,7 +11,7 @@ In the latest version from 03.03.2021 and later, the interface language is selec
 ATTENTION!!!!
 =============
 To date, this add-on supports the following camera models:  
-– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) works with the vencrtsp_v2 RTSP-server,  
+– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18),  
 – Yi 1080p Home (rootfs_y20, home_y20) not tested,  
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
@@ -21,7 +21,7 @@ If your camera model doesn't work after installation this add-on, then reinstall
 ВНИМАНИЕ!!!
 ===========
 На сегодняшний день дополнение поддерживает следующие модели камер:  
-– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) работает с vencrtsp_v2 RTSP-сервером,  
+– Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18),  
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялась,  
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
