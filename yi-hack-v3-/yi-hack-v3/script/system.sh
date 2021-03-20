@@ -18,13 +18,6 @@ elif [ -d "/home/yi-hack-v3" ]; then
 	export PATH=$PATH:/home/base/tools:/home/yi-hack-v3/bin:/home/yi-hack-v3/sbin:/tmp/sd/yi-hack-v3/bin:/tmp/sd/yi-hack-v3/sbin
 fi
 
-if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
-  if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
-	killall cloudAPI
-	killall cloud
-  fi
-fi
-
 if [ -n "$(cat $YI_HACK_V3_PREFIX/etc/hostname)" ] ; then
 	hostname $(cat $YI_HACK_V3_PREFIX/etc/hostname)
 fi
@@ -50,4 +43,26 @@ if [ -f "/tmp/sd/yi-hack-v3/startup.sh" ]; then
 	/tmp/sd/yi-hack-v3/startup.sh
 elif [ -f "/home/hd1/yi-hack-v3/startup.sh" ]; then
 	/home/hd1/yi-hack-v3/startup.sh
+fi
+
+if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
+  if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
+	if [ -d "/tmp/sd" ]; then
+		sd="/tmp/sd"
+	else
+		sd="/home/hd1"
+	fi
+	sleep 20
+	i=0
+	while [ $i -lt 30 ] ; do
+		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
+			killall dispatch
+			killall cloudAPI
+			killall cloud
+			i=30
+		fi
+		sleep 5
+		i=$(( $i + 1 ))
+	done
+  fi
 fi
