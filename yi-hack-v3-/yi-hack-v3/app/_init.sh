@@ -27,9 +27,9 @@ if [ "$L" == "yes" ] ; then
 	cm=$(sed -n 1p $YI_HACK_PREFIX/yi-hack-v3/.hackinfo | sed -n '/.*=/s///p')
 	case $cm in
 	  *"Yi Dom"*)
-		./oss &
 	  ;;
 	  *)
+		./oss &
 	  ;;
 	esac
 
