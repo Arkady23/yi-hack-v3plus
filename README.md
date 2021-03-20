@@ -16,7 +16,7 @@ To date, this add-on supports the following camera models:
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
 – Yi Outdoor (rootfs_h30, home_h30) works with the RTSP2303-server.  
-If your camera model doesn't work after installation this add-on, then reinstall the firmware from the project https://github.com/shadow-1/yi-hack-v3. Then log in via ftp and copy the /usr/ and /home/ folders with everything that is there (there are no passwords in them) to your computer. Archive these folders and send them to me an email a(dog)kornienko.ru, please. After that, I can release a new version of this add-on for your camera model.  
+If your camera model is 720p, then you should use the yi-hack-v3 add-on!!! You're in luck, today there are rtsp-servers for 720p cameras. For 1080p cameras of these models, there are currently no stable rtsp-servers.  
 
 ВНИМАНИЕ!!!
 ===========
@@ -25,8 +25,10 @@ If your camera model doesn't work after installation this add-on, then reinstall
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялась,  
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
-– Yi Outdoor (rootfs_h30, home_h30) работает с RTSP2303-сервером,  
-Если ваша модель камеры не работает после установки этого дополнения, то переустановите прошивку из проекта https://github.com/shadow-1/yi-hack-v3. А затем войдите в систему через ftp и скопируйте папки /usr/ и /home/ со всем, что там есть (в них нет паролей) на свой компьютер. Заархивируйте эти папки и пришлите их мне по электронной почте a(собака)kornienko.ru. После этого я могу выпустить новую версию этого дополнения для вашей модели камеры.  
+– Yi Outdoor (rootfs_h30, home_h30) работает с RTSP2303-сервером не стабильно,  
+Если ваша модель камеры с разрешением 720p, то вам следует использовать дополнение yi-hack-v3-!!! Вам повезло, на сегодняшний день есть rtsp-серверы для камер 720p. Для камер 1080р указанных можелей на сегодня отсутствуют стабильные rtsp-сервера. Rtsp-server для 720p работает на базовой прошивке 1.8.7.0C. Её можно установить отсюда https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2 .
+
+работает после установки этого дополнения, то переустановите прошивку из проекта https://github.com/shadow-1/yi-hack-v3. А затем войдите в систему через ftp и скопируйте папки /usr/ и /home/ со всем, что там есть (в них нет паролей) на свой компьютер. Заархивируйте эти папки и пришлите их мне по электронной почте a(собака)kornienko.ru. После этого я могу выпустить новую версию этого дополнения для вашей модели камеры.  
 * * * * *
 
 Дополнение включает:  
