@@ -61,7 +61,7 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
 			killall cloud
 			i=30
 		fi
-		sleep 5
+		sleep 8
 		i=$(( $i + 1 ))
 	done
   fi
