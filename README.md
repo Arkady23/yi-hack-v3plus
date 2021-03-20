@@ -15,7 +15,7 @@ To date, this add-on supports the following camera models:
 – Yi Dome (rootfs_v201, home_v201) not tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
 – Yi Outdoor (rootfs_h30, home_h30) works with the RTSP2303-server.  
-If your camera model is 720p, then you should use the yi-hack-v3 add-on!!! You're in luck, there are currently rtsp-servers for 720p cameras. For 1080p cameras of these models, there are currently no stable rtsp-servers. The rtsp-server used for 720p runs on the base firmware 1.8.7.0C. You can install it from here https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2.  
+If your camera model is 720p, then you should use the yi-hack-v3 add-on!!! You're in luck, there are currently rtsp-servers for 720p cameras. For 1080p cameras of these models, there are currently no stable rtsp servers. The rtsp-server used for 720p runs on the base firmware 1.8.7.0C. You can install it from here https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2.  
 
 ВНИМАНИЕ!!!
 ===========
@@ -25,7 +25,7 @@ If your camera model is 720p, then you should use the yi-hack-v3 add-on!!! You'r
 – Yi Dome (rootfs_v201, home_v201) не проверялась,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялась,  
 – Yi Outdoor (rootfs_h30, home_h30) работает с RTSP2303-сервером не стабильно,  
-Если ваша модель камеры с разрешением 720p, то вам следует использовать дополнение yi-hack-v3-!!! Вам повезло, на сегодняшний день rtsp-серверы для камер 720p есть. Для камер 1080р указанных можелей на сегодня отсутствуют стабильные rtsp-сервера. Используемый rtsp-сервер для 720p работает на базовой прошивке 1.8.7.0C. Её можно установить отсюда https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2.
+Если ваша модель камеры с разрешением 720p, то вам следует использовать дополнение yi-hack-v3-!!! Вам повезло, на сегодняшний день rtsp-серверы для камер 720p есть. Для камер 1080р указанных моделей на сегодня отсутствуют стабильные rtsp-сервера. Используемый rtsp-сервер для 720p работает на базовой прошивке 1.8.7.0C. Её можно установить отсюда https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2.
 
 * * * * *
 
