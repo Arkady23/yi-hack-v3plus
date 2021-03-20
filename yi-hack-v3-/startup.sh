@@ -4,6 +4,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #  !!!  Дополнение устанавливается на прошивку yi-hack-v3 0.1.4-beta2  !!!
 #  !!! https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2 !!!
+#  Этот файл startup.sh должен быть в корне на SD-карте!
 #  Содержание скаченного архива поместить на SD-карту, включить или перезагрузить камеру,
 #  если папка с установщиком была скопирована на sd-карту по ftp. Камера скопирует нужные файлы и
 #  перезагрузится. После этого зайдите обычным обозревателем на адрес камеры, например:
@@ -11,6 +12,7 @@
 #
 #  !!!  The add-on is installed on the yi-hack-v3 0.1.4-beta2 firmware !!!
 #  !!! https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.4-beta2 !!!
+#  This file is startup.sh must be in the root on the SD card!
 #  Put everything inside the downloaded archive on the SD-card, turn on or restart the camera
 #  if the installer folder was copied to the sd card via ftp. The camera will copy the necessary files and
 #  reboot. After that, go to the address of the camera with a normal browser, for example:
