@@ -20,10 +20,8 @@ fi
 
 if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
   if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
-	killall oss
 	killall cloudAPI
 	killall cloud
-	killall p2p_tnp
   fi
 fi
 
