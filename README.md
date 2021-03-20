@@ -1,7 +1,7 @@
-# yi-hack-v3plus
+# yi-hack-v3- & yi-hack-v3+
 In the latest version from 03.03.2021 and later, the interface language is selected automatically according to the browser language.  
 
-Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (не платный). После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP.
+Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (не платный, стабильно работает для Yi home 720р CN17, Dome и совместимых на проекте yi-hach-v3-). После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP.
 
 Вы можете установить это дополнение к вашей Yi камере, если у вас уже установлена прошивка yi-hack-v3.
 
