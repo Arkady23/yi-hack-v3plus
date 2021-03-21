@@ -51,3 +51,26 @@ if [ -f "/tmp/sd/yi-hack-v3/startup.sh" ]; then
 elif [ -f "/home/hd1/yi-hack-v3/startup.sh" ]; then
 	/home/hd1/yi-hack-v3/startup.sh
 fi
+
+if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
+  if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
+	if [ -d "/tmp/sd" ]; then
+		sd="/tmp/sd"
+	else
+		sd="/home/hd1"
+	fi
+	sleep 20
+	i=0
+	while [ $i -lt 30 ] ; do
+		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
+			killall dispatch
+			killall cloudAPI
+			killall p2p_tnp
+			killall cloud
+			i=30
+		fi
+		sleep 5
+		i=$(( $i + 1 ))
+	done
+  fi
+fi
