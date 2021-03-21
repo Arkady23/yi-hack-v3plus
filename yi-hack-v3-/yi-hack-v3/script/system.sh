@@ -58,6 +58,7 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
 			killall dispatch
 			killall cloudAPI
+			killall p2p_tnp
 			killall cloud
 			i=30
 		fi
