@@ -13,20 +13,35 @@ get_config(){
 
 RTSP=$(get_config RTSP)
 
+L="no"
+L2="no"
 if [[ $(get_config DISABLE_CLOUD) != "yes" ]] ; then
-	./mp4record &
-	./cloud &
-	./p2p_tnp &
-	if [[ $(cat /home/app/.camver) != "yi_dome" ]] ; then
-	  ./oss &
-	fi
-	if [ "$RTSP" != "yes" ] ; then
-	  ./watch_process &
-	  insmod /home/app/localko/watchdog.ko
-	fi
+	L="yes"
 elif [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
+	L="yes"
+	L2="yes"
+fi
+
+if [ "$L" == "yes" ] ; then
 	./mp4record &
 	./cloud &
+	if [ "$L2" != "yes" ] ; then
+		./p2p_tnp &
+	fi
+
+	cm=$(sed -n 1p $YI_HACK_PREFIX/yi-hack-v3/.hackinfo | sed -n '/.*=/s///p')
+	case $cm in
+	  *"Yi Dom"*)
+	  ;;
+	  *)
+		./oss &
+	  ;;
+	esac
+
+	if [ "$RTSP" != "yes" ] ; then
+		./watch_process &
+		insmod /home/app/localko/watchdog.ko
+	fi
 fi
 
 if [ "$RTSP" == "yes" ] ; then
