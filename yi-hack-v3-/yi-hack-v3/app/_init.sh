@@ -13,6 +13,7 @@ get_config(){
 
 RTSP=$(get_config RTSP)
 
+L="no"
 if [[ $(get_config DISABLE_CLOUD) != "yes" ]] ; then
 	L="yes"
 elif [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
