@@ -12,29 +12,11 @@
  fi
  fr="$pr/yi-hack-v3"
  ta="/home/app"
- rs="rtsp2303"
- cm=$(sed -n 1p $to/.hackinfo | sed -n '/.*=/s///p')
-
- case $cm in
-   *"17CN"*)
-	sed -i "s/.\/$rs/startOFS=19264 repeatOFS=399980 readsPMON=-1 .\/$rs/" $fr/app/_init.sh
-	;;
-   *)
-	;;
- esac
 
  sed -i '/.\/rmm /,$ d' $ta/init.sh
  cat $ta/init.sh $fr/app/_init.sh > $ta/_init.sh
  mv -f $ta/_init.sh $ta/init.sh
  chmod 0755 $ta/init.sh
-
- cp -f $fr/app/$rs $ta/
- cp -f $fr/app/libstdc++.so.6  /home/lib/
- chmod 0755 /home/lib/libstdc++.so.6
- chmod 0755 $ta/$rs
-
- cp -fr $fr/bin/ $to/
- chmod 0755 $to/bin/*
 
  rm -fr $to/etc/lwsws/
  rm -fr $to/etc/dropbear/
@@ -44,6 +26,17 @@
  rm -fr $to/www/css/
  rm -fr $to/www/js/
  rm -f $to/www/*
+
+ cp -f $fr/app/rRTSPServer $ta/
+ cp -f $fr/app/h264grabber $ta/
+ cp -f $fr/app/libstdc++.so.6  /home/lib/
+ chmod 0755 $ta/rRTSPServer
+ chmod 0755 $ta/h264grabber
+ chmod 0755 /home/lib/libstdc++.so.6
+
+ cp -fr $fr/bin/ $to/
+ chmod 0755 $to/bin/*
+
  ln -s $pr/record $to/www/record
  cp -fr $fr/www/ $to/
  chmod 0755 $to/www/cgi-bin/*

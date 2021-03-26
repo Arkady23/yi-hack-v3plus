@@ -13,30 +13,47 @@ get_config(){
 
 RTSP=$(get_config RTSP)
 
-L="no"
+L="yes"
+L1="no"
 L2="no"
 if [[ $(get_config DISABLE_CLOUD) != "yes" ]] ; then
-	L="yes"
+	L1="yes"
 elif [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
-	L="yes"
+	L1="yes"
 	L2="yes"
 fi
 
-if [ "$L" == "yes" ] ; then
+cam=$(sed -n 1p $YI_HACK_PREFIX/yi-hack-v3/.hackinfo | sed -n '/.*=/s///p')
+case $cam in
+  *"17CN"*)
+	L="no"
+	cm="yi_home"
+  ;;
+  *"i Dom"*)
+	L="no"
+	cm="yi_dome_720p"
+  ;;
+  *"p Dom"*)
+	cm="yi_dome"
+  ;;
+  *"utdoo"*)
+	cm="yi_outdoor"
+  ;;
+  *)
+	cm="yi_home_1080p"
+  ;;
+esac
+
+if [ "$L1" == "yes" ] ; then
 	./mp4record &
 	./cloud &
 	if [ "$L2" != "yes" ] ; then
 		./p2p_tnp &
 	fi
 
-	cm=$(sed -n 1p $YI_HACK_PREFIX/yi-hack-v3/.hackinfo | sed -n '/.*=/s///p')
-	case $cm in
-	  *"Yi Dom"*)
-	  ;;
-	  *)
+	if [ "$cm" != "yi_dome" ] ; then
 		./oss &
-	  ;;
-	esac
+	fi
 
 	if [ "$RTSP" != "yes" ] ; then
 		./watch_process &
@@ -45,6 +62,10 @@ if [ "$L" == "yes" ] ; then
 fi
 
 if [ "$RTSP" == "yes" ] ; then
-	./rtsp2303 &
+	if [ "$L" == "yes" ] ; then
+	  ./h264grabber -r low -m $cm -f &
+	fi
+	./h264grabber -r high -m $cm -f &
 	sleep 1
+	./rRTSPServer -r both &
 fi
