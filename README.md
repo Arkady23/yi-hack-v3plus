@@ -1,7 +1,7 @@
 # yi-hack-v3+ и yi-hack-v3-
 In the latest version from 03.03.2021 and later, the interface language is selected automatically according to the browser language.  
 
-Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (не платный, стабильно работает для Yi home 720р CN17, Dome и совместимых на проекте yi-hach-v3-). После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP.
+Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (безплатный). После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP.
 
 Вы можете установить это дополнение к вашей Yi камере, если у вас уже установлена прошивка yi-hack-v3.  
 По идее все появившиеся возможности должны быть совместимы с вашей камерой, если она совместима с yi-hack-v3.
@@ -38,7 +38,7 @@ To date, this add-on supports the following camera models:
              – служба сетевого времени и выбор временной зоны,  
              – безопасное отключение камеры.  
 
-Дополнение проверено на камере Yi home 17CN и Yi Outdoor. В случае, если с другими моделями камер RTSP-сервер не будет работать, просьба сообщить данные вашей камеры прислав файл /home/yi-hack-v3/.hackinfo или /usr/yi-hack-v3/.hackinfo либо его содержание на email a(собака)kornienko.ru.
+Дополнение проверено на камере Yi home 17CN. В случае, если с другими моделями камер RTSP-сервер не будет работать, просьба сообщить данные вашей камеры прислав файл /home/yi-hack-v3/.hackinfo или /usr/yi-hack-v3/.hackinfo либо его содержание на email a(собака)kornienko.ru.
 
 Поток RTSP открывается по URL rtsp://root@192.168.1.123:554/ch0_0.h264 и rtsp://root@192.168.1.123:554/ch0_1.h264 для HD и SD режимов соответственно.
 
