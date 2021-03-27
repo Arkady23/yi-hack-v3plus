@@ -41,12 +41,12 @@ else
 fi
 led -l$x
 
-if [[ $(get_config IR) == "yes" ]] ; then
-	x="0"
-else
+if [[ $(get_config MUTE) == "yes" ]] ; then
 	x="1"
+else
+	x="0"
 fi
-/home/hisiko/demo_config.sh $x 9
+/home/hisiko/demo_config.sh 9 $x
 
 if [[ $(get_config NTPD) == "yes" ]] ; then
 # Wait until all the other processes have been initialized
