@@ -40,7 +40,7 @@ To date, this add-on supports the following camera models:
 
 Дополнение проверено на камере Yi home 17CN. В случае, если с другими моделями камер RTSP-сервер не будет работать, просьба сообщить данные вашей камеры прислав файл /home/yi-hack-v3/.hackinfo или /usr/yi-hack-v3/.hackinfo либо его содержание на email a(собака)kornienko.ru.
 
-Поток RTSP открывается по URL rtsp://root@192.168.1.123:554/ch0_0.h264 и rtsp://root@192.168.1.123:554/ch0_1.h264 для HD и SD режимов соответственно.
+Поток RTSP открывается по URL rtsp://root:@192.168.1.123:554/ch0_0.h264 и rtsp://root:@192.168.1.123:554/ch0_1.h264 для HD и SD режимов соответственно.
 
 Ссылка на прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3  
 Использованы модули httpd, ntpd, all.css, favicon.png для web- и ntpd- серверов из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
