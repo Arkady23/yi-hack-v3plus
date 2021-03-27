@@ -26,6 +26,10 @@
  rm -fr $to/www/css/
  rm -fr $to/www/js/
  rm -f $to/www/*
+ rm -f $to/bin/dropbearmulti
+ rm -f $to/bin/lwsws
+ rm -f $to/lib/libwebsockets.so
+ rm -f $to/lib/libuv.so.1.0.0
 
  cp -f $fr/app/rRTSPServer $ta/
  cp -f $fr/app/h264grabber $ta/
@@ -47,10 +51,6 @@
  cp -f $fr/script/system.sh $to/script/
  chmod 0755 $to/script/system.sh
 
- rm -f $to/bin/dropbearmulti
- rm -f $to/bin/lwsws
- rm -f $to/lib/libwebsockets.so
- rm -f $to/lib/libuv.so.1.0.0
  rm -fr $fr/
  sync
 reboot

@@ -34,6 +34,20 @@ if [[ $(get_config FTPD) == "yes" ]] ; then
 	tcpsvd -vE 0.0.0.0 21 ftpd -w &
 fi
 
+if [[ $(get_config LED) == "yes" ]] ; then
+	x="on"
+else
+	x="off"
+fi
+led -l$x
+
+if [[ $(get_config IR) == "yes" ]] ; then
+	x="0"
+else
+	x="1"
+fi
+/home/hisiko/demo_config.sh $x 9
+
 if [[ $(get_config NTPD) == "yes" ]] ; then
 # Wait until all the other processes have been initialized
 	 sleep 5 && ntpd -p pool.ntp.org &
