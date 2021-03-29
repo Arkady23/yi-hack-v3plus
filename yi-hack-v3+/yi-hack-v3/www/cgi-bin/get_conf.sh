@@ -12,7 +12,7 @@ fi
 confs=$(cat $YI_HACK_PREFIX/system.conf)
 
 get_config(){
-	echo "$confs" | grep $1 | cut -d "=" -f2
+	echo "$confs" | grep -w $1 | cut -d "=" -f2
 }
 
 printf "\t%s" $(cat $YI_HACK_PREFIX/hostname)
@@ -22,6 +22,7 @@ printf "\t%s" $(get_config REC_WITHOUT_CLOUD)
 printf "\t%s" $(get_config LED)
 printf "\t%s" $(get_config MUTE)
 printf "\t%s" $(get_config RTSP)
+printf "\t%s" $(get_config RTSP_STREAM)
 printf "\t%s" $(get_config FTPD)
 printf "\t%s" $(get_config TELNETD)
 printf "\t%s" $(get_config NTPD)

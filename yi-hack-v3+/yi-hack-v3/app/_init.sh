@@ -8,12 +8,11 @@ elif [ -d "/home/yi-hack-v3" ]; then
 fi
 
 get_config(){
-	grep $1 $YI_HACK_PREFIX/yi-hack-v3/etc/system.conf | cut -d "=" -f2
+	grep -w $1 $YI_HACK_PREFIX/yi-hack-v3/etc/system.conf | cut -d "=" -f2
 }
 
 RTSP=$(get_config RTSP)
 
-L="yes"
 L1="no"
 L2="no"
 if [[ $(get_config DISABLE_CLOUD) != "yes" ]] ; then
@@ -26,11 +25,9 @@ fi
 cam=$(sed -n 1p $YI_HACK_PREFIX/yi-hack-v3/.hackinfo | sed -n '/.*=/s///p')
 case $cam in
   *"17CN"*)
-	L="no"
 	cm="yi_home"
   ;;
   *"i Dom"*)
-	L="no"
 	cm="yi_dome_720p"
   ;;
   *"p Dom"*)
@@ -62,10 +59,16 @@ if [ "$L1" == "yes" ] ; then
 fi
 
 if [ "$RTSP" == "yes" ] ; then
-	if [ "$L" == "yes" ] ; then
-	  ./h264grabber -r low -m $cm -f &
+  res=$(get_config RTSP_STREAM)
+  if [ "$res" != "high" ] ; then
+	N=$(ls -l /tmp/view | awk '{ print $5 }')
+	if [ $N == 781120 ] ; then
+		./h264grabber -r low -m $cm -f --buf_size $N --stream_offset 531264 &
+	else
+		./h264grabber -r low -m $cm -f &
 	fi
-	./h264grabber -r high -m $cm -f &
-	sleep 1
-	./rRTSPServer -r both &
+  fi
+  ./h264grabber -r high -m $cm -f &
+  sleep 1
+  ./rRTSPServer -r $res &
 fi

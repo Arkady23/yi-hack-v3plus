@@ -7,7 +7,7 @@ elif [ -d "/home/yi-hack-v3" ]; then
 fi
 
 get_config(){
-	grep $1 $YI_HACK_V3_PREFIX/etc/system.conf | cut -d "=" -f2
+	grep -w $1 $YI_HACK_V3_PREFIX/etc/system.conf | cut -d "=" -f2
 }
 
 if [ -d "/usr/yi-hack-v3" ]; then
@@ -68,12 +68,12 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
 	fi
 	sleep 20
 	i=0
-	while [ $i -lt 30 ] ; do
+	while [ $i -lt 50 ] ; do
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
 			killall dispatch
 			killall cloudAPI
 			killall cloud
-			i=30
+			i=50
 		fi
 		sleep 8
 		i=$(( $i + 1 ))
