@@ -70,13 +70,16 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
 	i=0
 	while [ $i -lt 50 ] ; do
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
-			killall dispatch
 			killall cloudAPI
 			killall cloud
+			killall dispatch
 			i=50
 		fi
 		sleep 8
 		i=$(( $i + 1 ))
 	done
+	if [ $i -gt 50 ] ; then
+		crond -c $YI_HACK_V3_PREFIX/etc/crontabs
+	fi
   fi
 fi

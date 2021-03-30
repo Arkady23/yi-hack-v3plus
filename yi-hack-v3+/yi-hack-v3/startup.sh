@@ -18,6 +18,8 @@
  mv -f $ta/_init.sh $ta/init.sh
  chmod 0755 $ta/init.sh
 
+ rm -f $to/bin/lwsws
+ rm -f $to/bin/dropbearmulti
  rm -fr $to/etc/lwsws/
  rm -fr $to/etc/dropbear/
  rm -f $to/etc/dropbear/
@@ -26,9 +28,9 @@
  rm -fr $to/www/css/
  rm -fr $to/www/js/
  rm -f $to/www/*
- rm -f $to/bin/dropbearmulti
- rm -f $to/bin/lwsws
  rm -f $to/lib/libwebsockets.so
+ rm -f $to/lib/libuv.so
+ rm -f $to/lib/libuv.so.1
  rm -f $to/lib/libuv.so.1.0.0
 
  cp -f $fr/app/rRTSPServer $ta/
@@ -49,7 +51,14 @@
 	cp -f $fr/script/TZ /etc/
  fi
  cp -f $fr/script/system.sh $to/script/
+ cp -f $fr/script/clean_records.sh $to/script/
  chmod 0755 $to/script/system.sh
+ chmod 0755 $to/script/clean_records.sh
+
+ if [[ ! -s $to/etc/crontabs/root ]]; then
+	mkdir -p $to/etc/crontabs
+	echo "0 * * * * $to/script/clean_records.sh 2" >> $to/etc/crontabs/root
+ fi
 
  rm -fr $fr/
  sync
