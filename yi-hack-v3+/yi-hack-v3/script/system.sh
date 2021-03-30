@@ -53,19 +53,21 @@ if [[ $(get_config NTPD) == "yes" ]] ; then
 	 sleep 5 && ntpd -p pool.ntp.org &
 fi
 
-if [ -f "/tmp/sd/yi-hack-v3/startup.sh" ]; then
-	/tmp/sd/yi-hack-v3/startup.sh
-elif [ -f "/home/hd1/yi-hack-v3/startup.sh" ]; then
-	/home/hd1/yi-hack-v3/startup.sh
+if [ -d "/tmp/sd" ]; then
+	sd="/tmp/sd"
+else
+	sd="/home/hd1"
+fi
+
+if [ -f "$sd/etc/wpa_supplicant.conf" ]; then
+	cp -f $sd/etc/wpa_supplicant.conf /tmp/
+fi
+if [ -f "$sd/yi-hack-v3/startup.sh" ]; then
+	$sd/yi-hack-v3/startup.sh
 fi
 
 if [[ $(get_config DISABLE_CLOUD) == "yes" ]] ; then
   if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]] ; then
-	if [ -d "/tmp/sd" ]; then
-		sd="/tmp/sd"
-	else
-		sd="/home/hd1"
-	fi
 	sleep 20
 	i=0
 	while [ $i -lt 50 ] ; do
