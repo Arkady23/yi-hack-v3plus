@@ -8,11 +8,15 @@ elif [ -d "/home/yi-hack-v3" ]; then
         YI_HACK_PREFIX="/home/yi-hack-v3"
 fi
 
+PS=$(ps)
 CAMERA_MODEL=$(sed -n 1p $YI_HACK_PREFIX/.hackinfo | sed -n '/.*=/s///p')
 CPU=$(grep -e Processor -e Hardware /proc/cpuinfo | awk '{print $3}')
 CAM=$(cat /home/base/init.sh | grep if=/home/home_ | sed -e 's/.*home_\(.*\) of=.*/\1/')
 FW_VERSION=$(sed -n 2,2p $YI_HACK_PREFIX/.hackinfo | sed -n '/.*=/s///p')
 HOME_VERSION=$(cat /home/app/.appver)
+DISP=$(echo "$PS" | grep -q './dispatch' && echo $?)
+CLOUD=$(echo "$PS" | grep -q './cloud' && echo $?)
+
 LOCAL_TIME=$(date)
 UPTIME=$(cat /proc/uptime | cut -d ' ' -f1)
 LOAD_AVG=$(cat /proc/loadavg | cut -d ' ' -f1-3)
@@ -33,6 +37,8 @@ printf "\t%s" "$CPU"
 printf "\t%s" "$CAM"
 printf "\t%s" "$FW_VERSION"
 printf "\t%s" "$HOME_VERSION"
+printf "\t%s" "$DISP"
+printf "\t%s" "$CLOUD"
 printf "\t%s" "$LOCAL_TIME"
 printf "\t%s" "$UPTIME"
 printf "\t%s" "$LOAD_AVG"
