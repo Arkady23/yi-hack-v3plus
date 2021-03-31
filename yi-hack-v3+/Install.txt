@@ -1,13 +1,15 @@
   Установка / Installation:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Папку yi-hack-v3 из скаченного архива поместить на SD-карту, включить или перезагрузить камеру,
-  если папка с установщиком была скопирована на sd-карту по ftp. Камера скопирует нужные файлы и
-  перезагрузится. После этого зайдите обычным обозревателем на адрес камеры, например:
+  если папка с установщиком была скопирована на sd-карту по ftp. Установочная папка yi-hack-v3
+  должна находиться в корне SD-карты. Камера скопирует нужные файлы и перезагрузится. После этого
+  зайдите обычным обозревателем на адрес камеры, например:
   http://192.168.1.123.
 
   Place the yi-hack-v3 folder from the downloaded archive on the SD-card, turn on or restart the camera
-  if the installer folder was copied to the sd card via ftp. The camera will copy the necessary files and
-  reboot. After that, go to the address of the camera with a normal browser, for example:
+  if the installer folder was copied to the sd card via ftp. Installation folder yi-hack-v3 must be
+  located in the root of the SD-card. The camera will copy the necessary files and reboot. After that,
+  go to the address of the camera with a normal browser, for example:
   http://192.168.1.123.
 
 А.Б.Корниенко
