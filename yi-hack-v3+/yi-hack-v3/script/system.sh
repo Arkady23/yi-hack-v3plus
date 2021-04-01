@@ -72,7 +72,6 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]]; then
 	i=0
 	while [ $i -lt 50 ]; do
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
-			killall dispatch
 			killall cloudAPI
 			killall cloud
 			killall dispatch
