@@ -2,4 +2,3 @@
 
 printf "Content-Type: text/html\r\n\r\n"
 printf "\ttest\t%s" "ok"
-sync
