@@ -42,7 +42,9 @@ if [ "$RTSP" == "yes" ] ; then
   if [ "$res" != "high" ] ; then
 	./h264grabber -r low -m $cm -f &
   fi
-  ./h264grabber -r high -m $cm -f &
+  if [ "$res" != "low" ] ; then
+	./h264grabber -r high -m $cm -f &
+  fi
   sleep 1
   ./rRTSPServer -r $res &
 fi
