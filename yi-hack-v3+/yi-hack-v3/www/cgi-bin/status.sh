@@ -9,9 +9,14 @@ elif [ -d "/home/yi-hack-v3" ]; then
 fi
 
 PS=$(ps)
-CAMERA_MODEL=$(sed -n 1p $YI_HACK_PREFIX/.hackinfo | sed -n '/.*=/s///p')
-CPU=$(grep -e Processor -e Hardware /proc/cpuinfo | awk '{print $3}')
 CAM=$(cat /home/base/init.sh | grep if=/home/home_ | sed -e 's/.*home_\(.*\) of=.*/\1/')
+if [ $CAM == y18m ]; then
+	CAMERA_MODEL="Yi Home"
+else
+	CAMERA_MODEL=$(sed -n 1p $YI_HACK_PREFIX/.hackinfo | sed -n '/.*=/s///p')
+fi
+CAMERA_MODEL="$CAMERA_MODEL $(od -j36 -N4 -An -c /etc/back.bin | sed 's/[\s ]//g')"
+CPU=$(grep -e Processor -e Hardware /proc/cpuinfo | awk '{print $3}')
 FW_VERSION=$(sed -n 2,2p $YI_HACK_PREFIX/.hackinfo | sed -n '/.*=/s///p')
 HOME_VERSION=$(cat /home/app/.appver)
 DISP=$(echo "$PS" | grep -q './dispatch' && echo $?)
