@@ -64,6 +64,7 @@ fi
 
 if [ $RTSP == yes ] ; then
   res=$(get_config RTSP_STREAM)
+  sleep 2
   if [ $res != high ] ; then
 	./h264grabber -r low -m $cm -f &
   fi
