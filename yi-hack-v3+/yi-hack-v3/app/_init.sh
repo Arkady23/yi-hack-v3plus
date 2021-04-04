@@ -1,16 +1,15 @@
 ./rmm &
 sleep 3
 
-if [ -d "/usr/yi-hack-v3" ]; then
-	YI_HACK_PREFIX=/usr
-elif [ -d "/home/yi-hack-v3" ]; then
-	YI_HACK_PREFIX=/home
-fi
-
 if [ -d "/tmp/sd" ]; then
 	pr=/tmp/sd
 else
 	pr=/home/hd1
+fi
+if [ -d "/usr/yi-hack-v3" ]; then
+	YI_HACK_PREFIX=/usr
+elif [ -d "/home/yi-hack-v3" ]; then
+	YI_HACK_PREFIX=/home
 fi
 
 LOGFILE=$pr/yi-hack-v3+.log
