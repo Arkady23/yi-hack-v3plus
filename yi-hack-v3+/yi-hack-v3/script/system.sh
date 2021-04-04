@@ -83,5 +83,7 @@ if [[ $(get_config DISABLE_CLOUD) == "yes" ]]; then
 	if [ $i -gt 50 ] ; then
 		crond -c $YI_HACK_V3_PREFIX/etc/crontabs
 	fi
+  else
+	killall dispatch
   fi
 fi
