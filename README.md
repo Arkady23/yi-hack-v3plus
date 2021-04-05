@@ -8,8 +8,6 @@ This add-on supports the following camera models:
 
 In the latest version from 03.03.2021 and later, the interface language is selected automatically according to the browser language.  
 
-Вкратце — в yi-hack-v3 теперь обновленный web-сервер, нужные настройки, RTSP-сервер (бесплатный). После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP.  
-
 Дополнение поддерживает следующие модели камер:  
 – Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) проверено,  
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялось,  
@@ -24,9 +22,11 @@ In the latest version from 03.03.2021 and later, the interface language is selec
 — просмотр через http записей с sd-карты;  
 — добавлен ряд настроек:  
              – отключение облака, работа в автономном режиме,  
-             – установлен RTSP-сервер,  
-             – служба сетевого времени и выбор временной зоны,  
+             – включение RTSP-сервера (бесплатно),  
+             – включение службы сетевого времени и выбор временной зоны,  
              – безопасное отключение камеры.  
+
+После установки дополнения камера будет поддерживаться платформой Home Assistant. Один из полезных проектов на базе Home Assistant: https://github.com/AlexxIT/HassWP. 
 
 Дополнение проверено на камерах Yi Home 17CN и Yi Outdoor. В случае, если что-то не так работает, просьба задавать вопросы в разделе дискуссий, показав журнал установки дополнения, находячийся по адресу /tnp/sd/yi-hack-v3+.log или /home/hd1/yi-hack-v3+.log.  
 
