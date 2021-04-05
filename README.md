@@ -15,7 +15,7 @@ In the latest version from 03.03.2021 and later, the interface language is selec
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялось,  
 – Yi Outdoor (rootfs_h30, home_h30) проверено.  
 
-Вы можете установить это дополнение к вашей Yi камере, если у вас уже установлена стоковая прошивка yi-hack-v3 либо произвести установку одновременно со стоковой прошивкой поместив на карту файлы rootfs_XXX, home_XXX и папку с дополнением yi-hack-v3.  
+Вы можете установить это дополнение к вашей Yi камере, если у вас уже установлена стоковая прошивка yi-hack-v3 либо произвести установку одновременно со стоковой прошивкой поместив на карту 2 файла rootfs_XXX, home_XXX и папку с дополнением yi-hack-v3.  
 
 Дополнение включает:  
 — обновленный web-сервер;  
@@ -30,8 +30,8 @@ In the latest version from 03.03.2021 and later, the interface language is selec
 
 Дополнение проверено на камерах Yi Home 17CN и Yi Outdoor. В случае, если что-то не так работает, просьба задавать вопросы в разделе дискуссий, показав журнал установки дополнения, находячийся по адресу /tnp/sd/yi-hack-v3+.log или /home/hd1/yi-hack-v3+.log.  
 
-Ссылка на прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.6.  
-Использованы модули httpd, ntpd, all.css, favicon.png для web- и ntpd- серверов из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
+Ссылка на стоковую прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.6.  
+В дополнении использованы модули httpd, ntpd, all.css, favicon.png для web- и ntpd- серверов из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
 Ну и самое главное — огромная благодарность за RTSP Roleo https://github.com/roleoroleo!!! Он первый за много лет сделал RTSP-сервер для старых камер с 720p, таких как Yi home 17CN. Благодаря его разработке эта линейка камер теперь включает полноценный функционал IP-камер.  
 А я сделал эту скромную сборку для себя. Если она кому-то пригодится — буду только рад.  
   
