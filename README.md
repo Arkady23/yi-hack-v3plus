@@ -43,7 +43,7 @@ To date, this add-on supports the following camera models:
 Ссылка на прошивку shadow-1 https://github.com/shadow-1/yi-hack-v3/releases/tag/0.1.6.  
 Использованы модули httpd, ntpd, all.css, favicon.png для web- и ntpd- серверов из проекта TheCrypt0. Ссылка https://github.com/TheCrypt0/yi-hack-v4.  
 Ну и самое главное — огромная благодарность за RTSP Roleo https://github.com/roleoroleo!!! Он первый за много лет сделал RTSP-сервер для старых камер с 720p, таких как Yi home 17CN. Благодаря его разработке эта линейка камер теперь включает полноценный функционал IP-камер.  
-А я сделал эту скромную сборку для себя. Если она кому-то пригодится — буду только рад.
+А я сделал эту скромную сборку для себя. Если она кому-то пригодится — буду только рад.  
 
 ![Просмотр папок с записями](https://github.com/Arkady23/yi-hack-v3plus/blob/main/Screenshots/image_2021_02_21T13_57_08_096Z.png?raw=true)
 
