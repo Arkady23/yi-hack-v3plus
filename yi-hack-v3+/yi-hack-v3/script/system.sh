@@ -59,30 +59,28 @@ else
 	sd=/home/hd1
 fi
 
-if [ -f "$sd/etc/wpa_supplicant.conf" ]; then
-	cp -f $sd/etc/wpa_supplicant.conf /tmp/
-fi
 if [ -f "$sd/yi-hack-v3/startup.sh" ]; then
 	$sd/yi-hack-v3/startup.sh
 fi
+if [ -f "$sd/etc/wpa_supplicant.conf" ]; then
+	cp -f $sd/etc/wpa_supplicant.conf /tmp/
+fi
 
 if [[ $(get_config DISABLE_CLOUD) == "yes" ]]; then
+  sleep 20
   if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]]; then
-	sleep 20
+	crond -c $YI_HACK_V3_PREFIX/etc/crontabs
 	i=0
 	while [ $i -lt 50 ]; do
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
-			killall cloudAPI
-			killall cloud
-			killall dispatch
 			i=50
 		fi
 		sleep 8
 		i=$(( $i + 1 ))
 	done
-	if [ $i -gt 50 ] ; then
-		crond -c $YI_HACK_V3_PREFIX/etc/crontabs
-	fi
+	killall cloudAPI
+	killall cloud
+	killall dispatch
   else
 	killall dispatch
   fi
