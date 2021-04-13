@@ -2,7 +2,7 @@
 This add-on supports the following camera models:  
 – Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) tested,  
 – Yi 1080p Home (rootfs_y20, home_y20) not tested,  
-– Yi Dome (rootfs_v201, home_v201) not tested,  
+– Yi Dome (rootfs_v201, home_v201) tested,  
 – Yi 1080p Dome (rootfs_h20, home_h20) not tested,  
 – Yi Outdoor (rootfs_h30, home_h30) tested.  
 
@@ -11,7 +11,7 @@ In the latest version from 03.03.2021 and later, the interface language is selec
 Дополнение поддерживает следующие модели камер:  
 – Yi Home 17CN / 27US / 47US (rootfs_y18, home_y18) проверено,  
 – Yi 1080p Home (rootfs_y20, home_y20) не проверялось,  
-– Yi Dome (rootfs_v201, home_v201) не проверялась,  
+– Yi Dome (rootfs_v201, home_v201) проверено,  
 – Yi 1080p Dome (rootfs_h20, home_h20) не проверялось,  
 – Yi Outdoor (rootfs_h30, home_h30) проверено.  
 
