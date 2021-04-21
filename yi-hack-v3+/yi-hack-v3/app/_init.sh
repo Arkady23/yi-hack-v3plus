@@ -23,17 +23,22 @@ log(){
   echo "$time $@" >> $LOGFILE
 }
 
+
 if [ -f "$LOGFILE" ]; then
   L=1
   N=$(ls -l $LOGFILE | awk '{ print $5 }')
   if [ $N -le 10000 ]; then
 	exec 2>> $LOGFILE
-	log "Starting init.sh"
   else
 	rm -f $LOGFILE
   fi
 else
   L=0
+fi
+
+$YI_HACK_PREFIX/yi-hack-v3/script/clean_records.sh 2
+if [ $L == 1 ] ; then
+	log "Starting init.sh"
 fi
 
 RTSP=$(get_config RTSP)

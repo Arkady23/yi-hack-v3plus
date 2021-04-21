@@ -62,21 +62,18 @@ fi
 if [ -f "$sd/yi-hack-v3/startup.sh" ]; then
 	$sd/yi-hack-v3/startup.sh
 fi
-if [ -f "$sd/etc/wpa_supplicant.conf" ]; then
-	cp -f $sd/etc/wpa_supplicant.conf /tmp/
-fi
 
 if [[ $(get_config DISABLE_CLOUD) == "yes" ]]; then
   sleep 20
   if [[ $(get_config REC_WITHOUT_CLOUD) == "yes" ]]; then
 	crond -c $YI_HACK_V3_PREFIX/etc/crontabs
-	i=0
-	while [ $i -lt 50 ]; do
+	N=0
+	while [ $N -lt 60 ]; do
 		if [ -f "$sd/record/tmp.mp4.tmp" ]; then
-			i=50
+			N=60
 		fi
 		sleep 8
-		i=$(( $i + 1 ))
+		N=$(($N+1))
 	done
 	killall cloudAPI
 	killall cloud
